@@ -1,0 +1,59 @@
+﻿@model IEnumerable<WebApplicationHotelManagement.ViewModel.RoomBookingViewModel>
+<table class="table">
+    <thead>
+        <tr class="bg-primary">
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Booking From</th>
+            <th>Booking To</th>
+            <th>Room</th>
+            <th>Number of members</th>
+            <th>Number of Days</th>
+            <th>Room Price</th>
+            <th>Total Amount</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @item.CustomerName
+            </td>
+            <td>
+                @item.CustomerAddress
+            </td>
+            <td>
+                @item.CustomerPhone
+            </td>
+            <td>
+                @item.BookingFrom
+            </td>
+            <td>
+                @item.BookingTo
+            </td>
+            <td>
+                @item.RoomNumber
+            </td>
+
+            <td>
+                @item.NumberOfMembers
+            </td>
+            <td>
+                @item.NumberOfDays
+            </td>
+            <td>
+                @item.RoomPrice
+            </td>
+            <td>
+                @item.TotalAmount.ToString();
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+
+
